@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: #e5e5f7;
+        opacity: 0.8;
+        background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+        background-size: 10px 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        color: #76453b;
+        font-family: "Helvetica", sans-serif;
+      }
+
+      p {
+        color: #304d30;
+        font-family: "Georgia", serif;
+      }
+
+      h2 {
+        margin-top: 20px;
+        font-family: "Verdana", sans-serif;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        font-family: "Courier New", monospace;
+      }
+      .division {
+        max-width: 1170px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+      }
+      #edge {
+        margin-left: auto;
+        width: 50%;
+        height: 50%;
+        padding: 10px;
+      }
+    </style>
+    <title>Dice Combinations</title>
+  </head>
+  <body>
+    <div class="division">
+      <h1>Problem Statement: The Doomed Dice Challenge</h1>
+      <br />
+      <h2>
+        1) How many total combinations are possible? Show the math along with
+        the code!
+      </h2>
+      <p style="color: #31304d">Total Combinations: {{ total_combinations }}</p>
+      <br />
+      <h2>
+        2) Calculate and display the distribution of all possible combinations
+        that can be obtained when rolling both Die A and Die B together. Show
+        the math along with the code! Hint: A 6 x 6 Matrix.
+      </h2>
+      <h2 style="color: #76453b">All Dice Possibilities</h2>
+      <ul>
+        {% for i in all_possible_combinations %} {% for j in i %}
+        <li>Dice 1: {{ j[0] }} , Dice 2: {{ j[1] }}</li>
+        {% endfor %}
+        <br />
+        {% endfor %}
+      </ul>
+      <br />
+      <h2>
+        3) Calculate the Probability of all Possible Sums occurring among the
+        number of combinations from (2). Example: P(Sum = 2) = 1/X as there is
+        only one combination possible to obtain Sum = 2. Die A = Die B = 1.
+      </h2>
+      <h2 style="color: #76453b">Original Dice Probabilities</h2>
+      <ul>
+        {% for sum, probability in original_probabilities.items() %}
+        <li>
+          Sum: {{ sum }}, &nbsp &nbsp Count of Sum: {{probability.count }},
+          &nbsp &nbsp Probability: {{ probability.probability }}
+        </li>
+        {% endfor %}
+      </ul>
+      <h2 style="color: #76453b">Modified Dice Probabilities</h2>
+      <ul>
+        {% for sum, probability in modified_probabilities.items() %}
+        <li>
+          Sum: {{ sum }} &nbsp &nbsp , Count of Sum: {{probability.count }},
+          &nbsp &nbsp Probability: {{ probability.probability }}
+        </li>
+        {% endfor %}
+      </ul>
+      <div id="edge">
+        <h2>Made by Sindhu Akumalla</h2>
+      </div>
+    </div>
+  </body>
+</html>
