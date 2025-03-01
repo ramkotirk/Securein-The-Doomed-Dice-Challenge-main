@@ -1,4 +1,4 @@
-Dice Probability Simulator
+Securein-The-Doomed-Dice-Challenge-main
 
 A Flask web application to simulate dice rolls and calculate probabilities.
 
