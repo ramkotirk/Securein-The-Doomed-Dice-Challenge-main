@@ -27,8 +27,8 @@ Usage
 3. View the original and modified probabilities
 4. Explore the "All Possible Combinations" section to see all possible outcomes
 
-Contributing
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
+Snaps
+![Alt Text] ()
 
 License
 This project is licensed under the MIT License.
